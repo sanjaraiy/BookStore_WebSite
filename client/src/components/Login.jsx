@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 function Login() {
   const {register, handleSubmit, formState: { errors }} = useForm();
   
+  axios.defaults.withCredentials=true;
   const onSubmit = async (data) => {
     const userInfo = {
       email : data.email,
@@ -16,8 +17,8 @@ function Login() {
      }
      
     //  console.log(userInfo);
-
-     await axios.post('http://localhost:4080/user/login', userInfo)
+    
+     await axios.post('https://book-store-web-site.vercel.app/login', userInfo)
      .then((res)=>{
        console.log(res.data);
        if(res.data){

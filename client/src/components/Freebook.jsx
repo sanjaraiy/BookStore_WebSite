@@ -11,11 +11,11 @@ import Cards from './Cards';
 
 function Freebook() {  
     const [filterBook,setFilterBook] = useState([]);
-
+    axios.defaults.withCredentials=true;
     useEffect((()=>{
         const getBooks = async() =>{
           try {
-              const res = await axios.get('http://localhost:4080/book');
+              const res = await axios.get('https://book-store-web-site.vercel.app/book');
               const data = res.data.filter((data)=>data.category === 'Free');
               // console.log(data);
               setFilterBook(data);
