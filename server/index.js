@@ -31,7 +31,9 @@ app.use(cors({
 app.use('/book',bookRouter);
 app.use('/user',userRouter);
 
-
+app.use("/",(req,res)=>{
+    res.json({msg : "Hello server is running on VERCEL"});
+})
 
 app.listen(PORT,()=>{
     console.log(`Server is running at port: ${PORT}`);
