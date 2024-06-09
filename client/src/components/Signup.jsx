@@ -27,7 +27,7 @@ function  Signup() {
      
     //  console.log(userInfo);
 
-     await axios.post('https://book-store-web-site.vercel.app/signup', userInfo)
+     await axios.post('https://book-store-backend-ten.vercel.app/signup', userInfo)
      .then((res)=>{
       //  console.log(res.data);
        if(res.data){
