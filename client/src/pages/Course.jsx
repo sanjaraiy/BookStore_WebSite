@@ -12,7 +12,7 @@ function Course() {
   useEffect(()=>{
     const getBooks = async ()=>{
       try {
-        const res =  await axios.get("http://localhost:4080/book")
+        const res =  await axios.get("https://book-store-backend-ashy.vercel.app/book")
         // console.log(res.data);
         setBook(res.data);
       } catch (error) {
