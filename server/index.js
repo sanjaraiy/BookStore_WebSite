@@ -24,8 +24,8 @@ app.use(express.urlencoded({extended:false}))
 app.use(cors({
     origin : [
         "http://localhost:5173",
-        "https://book-store-frontend-git-main-sanjhs-projects-9ddd6cb3.vercel.app/"
-
+        'https://book-store-frontend-zeta.vercel.app',
+            
     ],
     methods : ["GET", "POST"],
     credentials : true
