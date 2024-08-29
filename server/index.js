@@ -22,7 +22,11 @@ ConnectToMongoDB(URL);
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 app.use(cors({
-    origin : "*",
+    origin : [
+        "http://localhost:5173",
+        "https://book-store-frontend-git-main-sanjhs-projects-9ddd6cb3.vercel.app/"
+
+    ],
     methods : ["GET", "POST"],
     credentials : true
 }));

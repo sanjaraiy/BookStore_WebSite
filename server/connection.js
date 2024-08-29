@@ -4,7 +4,6 @@ async function ConnectionToMongoDB(url){
     try {
 
          await mongoose.connect(url);
-         
          console.log("Connected to mongoDB..!!");
 
     } catch (error) {
