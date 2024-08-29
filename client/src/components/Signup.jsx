@@ -27,7 +27,7 @@ function  Signup() {
      
     //  console.log(userInfo);
 
-     await axios.post('https://bookstorebackend-sanjhs-projects-9ddd6cb3.vercel.app/user/signup', userInfo)
+     await axios.post('http://localhost:4080/user/signup', userInfo)
      .then((res)=>{
       //  console.log(res.data);
        if(res.data){
