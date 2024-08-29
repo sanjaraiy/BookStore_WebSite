@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 // import list from '../../public/list.json'
 import Cards from '../components/Cards'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 
 function Course() {
-    
+   
+  
   const [book,setBook] = useState([])
 
   useEffect(()=>{
